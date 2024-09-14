@@ -20,7 +20,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 ![Screenshot3](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/Screenshot3.png)
 
 ## Video Demo
-Click <a href="https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/video/DEMO.mov">here</a> if you want to see the video
+Click <a href="https://github.com/teguh02/Indonesia-Territory-Forms/blob/e21776029eb6c66f61b583e4abf73361edb37bf2/dist/video/DEMO.mov">here</a> if you want to see the video
 
 ## Installation
 
