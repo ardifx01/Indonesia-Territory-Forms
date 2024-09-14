@@ -34,6 +34,11 @@ return [
 ];
 ```
 
+## Features
+- ✅ Indonesia Territory Including: Province, City, District, Sub-Disctrict and Zip Code
+- ✅ Cached Query To Make The Form More Faster
+- ✅ No Needed Any Seeder
+
 ## Usage
 For use this package, you can see this form scheme sample below
 
