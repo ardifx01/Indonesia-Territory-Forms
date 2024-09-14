@@ -19,6 +19,9 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 ![Screenshot3](https://github.com/user-attachments/assets/3b438cbe-b893-4edc-91e2-c4190f751dd2)
 
+## Video Demo
+https://github.com/user-attachments/assets/b12abc99-16cc-4e65-b245-5ca89f8dc68d
+
 ## Installation
 
 You can install the package via composer:
