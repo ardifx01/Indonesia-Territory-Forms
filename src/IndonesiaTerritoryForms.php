@@ -4,6 +4,7 @@ namespace Teguh02\IndonesiaTerritoryForms;
 
 use Teguh02\IndonesiaTerritoryForms\Traits\HasProvinceForm;
 use Filament\Forms\Components\Section;
+use Illuminate\Database\Schema\Blueprint;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasCityForm;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasDistrictForm;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasPostalCode;
@@ -27,5 +28,23 @@ class IndonesiaTerritoryForms {
                 config('indonesia-territory-forms.forms_visibility.sub_district') ? static::sub_district_form() : null,
                 config('indonesia-territory-forms.forms_visibility.postal_code') ? static::postal_code_form() : null,
             ]);
+    }
+
+    /**
+     * Automatically create the Indonesia Territory columns
+     * based on the config/indonesia-territory-forms.php
+     *
+     * @param Blueprint $table
+     * @return void
+     */
+    public static function make_Columns(Blueprint $table) : void
+    {
+        foreach (config('indonesia-territory-forms.forms_name') as $key => $value) {
+            if ($key === 'province') {
+                $table->unsignedBigInteger($value)->index();
+            } else {
+                $table->unsignedBigInteger($value)->index()->nullable();
+            }
+        }
     }
 }
