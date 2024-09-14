@@ -6,6 +6,7 @@ use Teguh02\IndonesiaTerritoryForms\Traits\HasProvinceForm;
 use Filament\Forms\Components\Section;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasCityForm;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasDistrictForm;
+use Teguh02\IndonesiaTerritoryForms\Traits\HasPostalCode;
 use Teguh02\IndonesiaTerritoryForms\Traits\HasSubDistrictForm;
 
 class IndonesiaTerritoryForms {
@@ -13,7 +14,8 @@ class IndonesiaTerritoryForms {
     use HasProvinceForm, 
         HasCityForm,
         HasDistrictForm,
-        HasSubDistrictForm;
+        HasSubDistrictForm,
+        HasPostalCode;
 
     public static function make() {
         return Section::make(__('indonesia-territory-forms::indonesia-territory-forms.section_title'))
@@ -21,7 +23,8 @@ class IndonesiaTerritoryForms {
                 static::province_form(),
                 static::city_form(),
                 static::district_form(),
-                static::sub_district_form()
+                static::sub_district_form(),
+                static::postal_code_form()
             ]);
     }
 }
