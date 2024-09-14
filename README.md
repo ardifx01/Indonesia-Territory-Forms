@@ -13,14 +13,14 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 - ✅ No Needed Any Seeder
 
 ## Screenshoot
-![Screenshot1](https://github.com/user-attachments/assets/08175777-6b7f-4ecf-95a9-69a2a2e81e59)
+![Screenshot1](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/Screenshot1.png)
 
-![Screenshot2](https://github.com/user-attachments/assets/bbad0925-cf70-434f-b1b1-3d8f3e39cf5a)
+![Screenshot2](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/Screenshot2.png)
 
-![Screenshot3](https://github.com/user-attachments/assets/3b438cbe-b893-4edc-91e2-c4190f751dd2)
+![Screenshot3](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/Screenshot3.png)
 
 ## Video Demo
-https://github.com/user-attachments/assets/b12abc99-16cc-4e65-b245-5ca89f8dc68d
+https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/video/DEMO.mov
 
 ## Installation
 
