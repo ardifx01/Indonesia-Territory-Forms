@@ -15,22 +15,16 @@ You can install the package via composer:
 composer require teguh02/indonesia-territory-forms
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag=indonesia-territory-forms-config
-```
-
 You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="indonesia-territory-forms-config"
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the langs using
 
 ```bash
-php artisan vendor:publish --tag="indonesia-territory-forms-views"
+php artisan vendor:publish --tag=indonesia-territory-forms-lang
 ```
 
 This is the contents of the published config file:
@@ -41,10 +35,23 @@ return [
 ```
 
 ## Usage
+For use this package, you can see this form scheme sample below
 
 ```php
-$indonesiaTerritoryForms = new Teguh02\IndonesiaTerritoryForms();
-echo $indonesiaTerritoryForms->echoPhrase('Hello, Teguh02!');
+use Teguh02\IndonesiaTerritoryForms\IndonesiaTerritoryForms;
+
+public static function form(Form $form): Form
+{
+    return $form
+        ->schema([
+            // ... your fields here
+
+            // Call the form
+            IndonesiaTerritoryForms::make(),
+
+            // ... your fields here
+        ]);
+}
 ```
 
 ## Testing
