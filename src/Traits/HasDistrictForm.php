@@ -15,7 +15,7 @@ trait HasDistrictForm
      */
     static function district_form() : Select
     {
-        return Select::make('dis_id')
+        return Select::make(config('indonesia-territory-forms.forms_name.district'))
             ->searchable()
             ->preload()
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.district'))

@@ -6,6 +6,6 @@ return [
     'province' => "Provinsi",
     'city' => "Kota",
     'district' => "Kecamatan",
-    'subdistrict' => "Kelurahan",
+    'sub_district' => "Kelurahan",
     'postal_code' => "Kode Pos",
 ];

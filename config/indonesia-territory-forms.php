@@ -12,7 +12,7 @@ return [
         'province' => 'province_id',
         'city' => 'city_id',
         'district' => 'district_id',
-        'subdistrict' => 'subdistrict_id',
+        'sub_district' => 'subdistrict_id',
         'postal_code' => 'postal_code',
     ]
 ];

@@ -15,7 +15,7 @@ trait HasCityForm
      */
     static function city_form() : Select
     {
-        return Select::make('city_id')
+        return Select::make(config('indonesia-territory-forms.forms_name.city'))
             ->searchable()
             ->preload()
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.city'))

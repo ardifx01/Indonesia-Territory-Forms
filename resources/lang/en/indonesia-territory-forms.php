@@ -6,6 +6,6 @@ return [
     'province' => "Province",
     'city' => "City",
     'district' => "District",
-    'subdistrict' => "Subdistrict",
+    'sub_district' => "Subdistrict",
     'postal_code' => "Postal Code",
 ];
