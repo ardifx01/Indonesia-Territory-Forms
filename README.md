@@ -81,14 +81,13 @@ Schema::create('users', function (Blueprint $table) {
 But you have still can make dynamicaly the migration column name using <code>IndonesiaTerritoryForms</code> class in your migration below.
 ```php
 Schema::create('users', function (Blueprint $table) {
-        $table->id();
-        IndonesiaTerritoryForms::make_Columns($table);
-
-        // Your another columns
-        $table->string('name');
-        $table->string('email')->unique();
-        $table->timestamps();
-    });
+    $table->id();
+    IndonesiaTerritoryForms::make_Columns($table);
+    
+    // Your another columns
+    $table->string('name');
+    $table->string('email')->unique();
+});
 ```
 
 ## Testing
