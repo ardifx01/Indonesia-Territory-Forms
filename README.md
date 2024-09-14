@@ -32,13 +32,6 @@ Optionally, you can publish the langs using
 php artisan vendor:publish --tag=indonesia-territory-forms-lang
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 ### Components or Custom Page
 For use this package on your component or custom page, you can see this form scheme sample below
@@ -83,7 +76,7 @@ But you have still can make dynamicaly the migration column name using <code>Ind
 Schema::create('users', function (Blueprint $table) {
     $table->id();
     IndonesiaTerritoryForms::make_Columns($table);
-    
+
     // Your another columns
     $table->string('name');
     $table->string('email')->unique();

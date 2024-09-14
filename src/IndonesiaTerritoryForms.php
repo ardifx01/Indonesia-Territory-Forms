@@ -40,11 +40,7 @@ class IndonesiaTerritoryForms {
     public static function make_Columns(Blueprint $table) : void
     {
         foreach (config('indonesia-territory-forms.forms_name') as $key => $value) {
-            if ($key === 'province') {
-                $table->unsignedBigInteger($value)->index();
-            } else {
-                $table->unsignedBigInteger($value)->index()->nullable();
-            }
+            $table->unsignedBigInteger($value)->nullable();
         }
     }
 }
