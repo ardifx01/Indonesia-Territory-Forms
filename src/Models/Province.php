@@ -14,7 +14,7 @@ class Province extends Connection {
     function all() : array
     {
         return (array) $this->db()
-                    ->query('SELECT * FROM provinces')
+                    ->query('SELECT * FROM provinces ORDER BY prov_name ASC')
                     ->fetchAll(parent::$FETCH_ASSOC);
     }
 
