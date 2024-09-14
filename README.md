@@ -61,6 +61,24 @@ public static function form(Form $form): Form
 ```
 
 ### Migration
+If you want to add several column to store the data, you can make a new column according with your config forms_name (you can't make a column with different name in forms_name). For example please see this code below
+
+```php
+Schema::create('users', function (Blueprint $table) {
+    $table->id();
+    $table->unsignedBigInteger('province_id')->nullable();
+    $table->unsignedBigInteger('city_id')->nullable();
+    $table->unsignedBigInteger('district_id')->nullable();
+    $table->unsignedBigInteger('subdistrict_id')->nullable();
+    $table->unsignedBigInteger('postal_code')->nullable();
+
+    // Your another columns
+    $table->string('name');
+    $table->string('email')->unique();
+});
+```
+
+But you have still can make dynamicaly the migration column name using <code>HasIndonesiaTerritoryColumn</code> traits in your migration below.
 
 ## Testing
 
