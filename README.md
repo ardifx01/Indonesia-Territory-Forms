@@ -40,7 +40,8 @@ return [
 ```
 
 ## Usage
-For use this package, you can see this form scheme sample below
+### Components or Custom Page
+For use this package on your component or custom page, you can see this form scheme sample below
 
 ```php
 use Teguh02\IndonesiaTerritoryForms\IndonesiaTerritoryForms;
@@ -58,6 +59,8 @@ public static function form(Form $form): Form
         ]);
 }
 ```
+
+### Migration
 
 ## Testing
 
