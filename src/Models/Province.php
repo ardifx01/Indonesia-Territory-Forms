@@ -2,9 +2,10 @@
 
 namespace Teguh02\IndonesiaTerritoryForms\Models;
 
-use Teguh02\IndonesiaTerritoryForms\Database\Connection;
+class Province extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
 
-class Province extends Connection {
+    # Define the table name
+    const TABLE = 'provinces';
 
     /**
      * Get all provinces
@@ -14,7 +15,7 @@ class Province extends Connection {
     function all() : array
     {
         return (array) $this->db()
-                    ->query('SELECT * FROM provinces ORDER BY prov_name ASC')
+                    ->query('SELECT * FROM '. self::TABLE .' ORDER BY prov_name ASC')
                     ->fetchAll(parent::$FETCH_ASSOC);
     }
 
