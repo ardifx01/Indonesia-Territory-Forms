@@ -3,7 +3,6 @@
 namespace Teguh02\IndonesiaTerritoryForms\Models;
 
 use Illuminate\Support\Facades\Cache;
-
 class Province extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
 
     # Define the table name
