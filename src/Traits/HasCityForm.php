@@ -3,9 +3,7 @@
 namespace Teguh02\IndonesiaTerritoryForms\Traits;
 
 use Filament\Forms\Components\Select;
-use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Get;
-use Illuminate\Support\Collection;
 use Teguh02\IndonesiaTerritoryForms\Models\City;
 
 trait HasCityForm 
