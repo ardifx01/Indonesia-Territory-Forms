@@ -9,11 +9,11 @@ class Province extends Connection {
     /**
      * Get all provinces
      *
-     * @return void
+     * @return array
      */
-    function all() 
+    function all() : array
     {
-        return $this->db()
+        return (array) $this->db()
                     ->query('SELECT * FROM provinces')
                     ->fetchAll(parent::$FETCH_ASSOC);
     }
