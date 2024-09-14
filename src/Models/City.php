@@ -22,7 +22,7 @@ class City extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
      */
     function city_by_provincy(int $prov_id) : array
     {
-        return (array) Cache::remember('city_by_province_'.$prov_id, 3600, function() use ($prov_id) {
+        return (array) Cache::remember('city_by_province_'.$prov_id, config('indonesia-territory-forms.cache_ttl'), function() use ($prov_id) {
             return $this->db()
                         ->query('SELECT '. implode(',', self::COLUMNS) .' FROM '. self::TABLE .' WHERE prov_id = '. $prov_id .' ORDER BY city_name ASC')
                         ->fetchAll(parent::$FETCH_ASSOC);

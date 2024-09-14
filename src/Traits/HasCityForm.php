@@ -18,6 +18,10 @@ trait HasCityForm
         return Select::make(config('indonesia-territory-forms.forms_name.city'))
             ->searchable()
             ->preload()
+            ->prefixIcon(fn() => match(config('indonesia-territory-forms.forms_icons.enable')) {
+                true => config('indonesia-territory-forms.forms_icons.icons.city'),
+                default => null
+            })
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.city'))
             ->name(config('indonesia-territory-forms.forms_name.city'))
             ->options(function (Get $get): array {

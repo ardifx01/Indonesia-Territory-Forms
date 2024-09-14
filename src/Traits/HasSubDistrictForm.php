@@ -17,6 +17,10 @@ trait HasSubDistrictForm
         return Select::make(config('indonesia-territory-forms.forms_name.sub_district'))
             ->searchable()
             ->preload()
+            ->prefixIcon(fn() => match(config('indonesia-territory-forms.forms_icons.enable')) {
+                true => config('indonesia-territory-forms.forms_icons.icons.sub_district'),
+                default => null
+            })
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.sub_district'))
             ->name(config('indonesia-territory-forms.forms_name.sub_district'))
             ->options(function (Get $get): array {

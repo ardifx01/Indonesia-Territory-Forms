@@ -21,7 +21,7 @@ class Province extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
      */
     function all() : array
     {
-        return (array) Cache::remember('all_provinces', 3600, function() {
+        return (array) Cache::remember('all_provinces', config('indonesia-territory-forms.cache_ttl'), function() {
             return $this->db()
                         ->query('SELECT '. implode(',', self::COLUMNS) .' FROM '. self::TABLE .' ORDER BY prov_name ASC')
                         ->fetchAll(parent::$FETCH_ASSOC);

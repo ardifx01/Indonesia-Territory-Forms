@@ -23,7 +23,7 @@ class SubDistrict extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
      */
     function subdistrict_by_district(int $dis_id) : array
     {
-        return (array) Cache::remember('subdistrict_by_district_'.$dis_id, 3600, function() use ($dis_id) {
+        return (array) Cache::remember('subdistrict_by_district_'.$dis_id, config('indonesia-territory-forms.cache_ttl'), function() use ($dis_id) {
             return $this->db()
                         ->query('SELECT '. implode(',', self::COLUMNS) .' FROM '. self::TABLE .' WHERE dis_id = '. $dis_id .' ORDER BY subdis_name ASC')
                         ->fetchAll(parent::$FETCH_ASSOC);

@@ -18,6 +18,10 @@ trait HasPostalCode
         return Select::make(config('indonesia-territory-forms.forms_name.postal_code'))
             ->searchable()
             ->preload()
+            ->prefixIcon(fn() => match(config('indonesia-territory-forms.forms_icons.enable')) {
+                true => config('indonesia-territory-forms.forms_icons.icons.postal_code'),
+                default => null
+            })
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.postal_code'))
             ->name(config('indonesia-territory-forms.forms_name.postal_code'))
             ->options(function (Get $get): array {

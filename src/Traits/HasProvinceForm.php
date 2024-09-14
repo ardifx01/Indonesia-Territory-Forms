@@ -16,6 +16,10 @@ trait HasProvinceForm
         return Select::make(config('indonesia-territory-forms.forms_name.province'))
             ->searchable()
             ->preload()
+            ->prefixIcon(fn() => match(config('indonesia-territory-forms.forms_icons.enable')) {
+                true => config('indonesia-territory-forms.forms_icons.icons.province'),
+                default => null
+            })
             ->label(__('indonesia-territory-forms::indonesia-territory-forms.province'))
             ->name(config('indonesia-territory-forms.forms_name.province'))
             ->options(fn() => collect(app(Province::class)->all())

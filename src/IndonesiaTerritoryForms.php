@@ -17,14 +17,15 @@ class IndonesiaTerritoryForms {
         HasSubDistrictForm,
         HasPostalCode;
 
-    public static function make() {
+    public static function make() : Section
+    {
         return Section::make(__('indonesia-territory-forms::indonesia-territory-forms.section_title'))
             ->schema([
                 static::province_form(),
-                static::city_form(),
-                static::district_form(),
-                static::sub_district_form(),
-                static::postal_code_form()
+                config('indonesia-territory-forms.forms_visibility.city') ? static::city_form() : null,
+                config('indonesia-territory-forms.forms_visibility.district') ? static::district_form() : null,
+                config('indonesia-territory-forms.forms_visibility.sub_district') ? static::sub_district_form() : null,
+                config('indonesia-territory-forms.forms_visibility.postal_code') ? static::postal_code_form() : null,
             ]);
     }
 }
