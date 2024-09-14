@@ -2,10 +2,17 @@
 
 namespace Teguh02\IndonesiaTerritoryForms\Models;
 
+use Illuminate\Support\Facades\Cache;
 class City extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
 
     # Define the table name
     const TABLE = 'city';
+
+    # Define the columns that will be fetched
+    const COLUMNS = [
+        'city_id',
+        'city_name'
+    ];
 
     /**
      * Get all cities by province
@@ -15,12 +22,11 @@ class City extends \Teguh02\IndonesiaTerritoryForms\Database\Connection {
      */
     function city_by_provincy(int $prov_id) : array
     {
-        $query = $this->db()
-                    ->prepare('SELECT city_id, city_name FROM '. self::TABLE .' WHERE prov_id = :prov_id ORDER BY city_name ASC');
-
-        $query->bindParam(':prov_id', $prov_id);
-        $query->execute();
-        return (array) $query->fetchAll(parent::$FETCH_ASSOC);
+        return (array) Cache::remember('city_by_province_'.$prov_id, 3600, function() use ($prov_id) {
+            return $this->db()
+                        ->query('SELECT '. implode(',', self::COLUMNS) .' FROM '. self::TABLE .' WHERE prov_id = '. $prov_id .' ORDER BY city_name ASC')
+                        ->fetchAll(parent::$FETCH_ASSOC);
+        });
     }
 
 }
