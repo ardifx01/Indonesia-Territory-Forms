@@ -1,6 +1,6 @@
 {
     "name": "teguh02/indonesia-territory-forms",
-    "description": "Display a Indonesia Territory Select Form Within the Zip-Code Without Any Database Configuration Needed Again",
+    "description": "Display a Indonesia Territory Select Form For Filament Within the Zip-Code Without Any Seeder Needed",
     "keywords": [
         "teguh02",
         "laravel",
