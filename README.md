@@ -19,7 +19,7 @@
 
 ![Screenshot3](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/Screenshot3.png)
 
-## Video Demo
+## Demo
 ![DEMO](https://raw.githubusercontent.com/teguh02/Indonesia-Territory-Forms/main/dist/images/DEMO.gif)
 
 ## Installation
